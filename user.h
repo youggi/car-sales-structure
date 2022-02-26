@@ -1,14 +1,19 @@
-enum ROLE {
+#ifndef USER_H
+#define USER_H
+
+enum USER_ROLE {
     CUSTOMER,
     ADMIN
 };
 
-typedef struct {
+typedef struct user_t {
     int id;
     char name[20];
     char password[20];
-    ROLE role;
+    enum USER_ROLE role;
 } USER;
+
+#endif;
 
 /* 사용자 기능 */
 // 고객 계정 생성
